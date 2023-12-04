@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/contains-duplicate/description/
 use std::collections::HashSet;
 
 impl Solution {
