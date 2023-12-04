@@ -24,6 +24,21 @@ class Solution:
         
         return nums[i]
 
-
+    def productExceptSelfFollowUp(self, nums):
+        result = []
+        cumulator = 1
+        for i in range(len(nums)):
+            if i == 0:
+                result.append(1)
+            else:
+                result.append(cumulator)
+            cumulator *= nums[i]
+        print(result)
+        cumulator = 1
+        for i in range(len(nums)-1,-1,-1):
+            result[i] *= cumulator
+            cumulator *= nums[i]
+        print(result)
+        return result
 # s = Solution()
 Solution().productExceptSelf([1,2,3,4])
