@@ -5,7 +5,6 @@ class Solution:
     def threeSum(self, nums):
         nums.sort()
         last_num = None
-        nums.fjaskdfjsakd
         result = []
         for i in range(len(nums) - 2):
             if nums[i] == last_num:
