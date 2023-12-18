@@ -1,3 +1,5 @@
+import os
+
 name_of_file = input("Provide name of file in {Num. Name} format: ")
 dot_index = name_of_file.find(".")
 name_of_file = name_of_file[dot_index + 2 :]
@@ -12,5 +14,5 @@ with open(f"{name_of_file}.py", "w") as f:
     f.write(
         f'# git add . && git commit -m "completed {name_of_file}" && git push && exit'
     )
-
 print(f"{name_of_file}.py generated")
+os.kill(os.getppid(), 1)
