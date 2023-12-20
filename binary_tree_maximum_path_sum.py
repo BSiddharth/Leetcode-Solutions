@@ -2,7 +2,7 @@
 # git add . && git commit -m "completed binary_tree_maximum_path_sum" && git push && exit
 
 import math
-from typing import assert_type
+from typing import Optional
 
 
 # Definition for a binary tree node.
