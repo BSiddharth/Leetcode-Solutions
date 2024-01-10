@@ -1,5 +1,7 @@
-a = 1
-b= 1
-c = 1
+a = {'a':1,'b':1}
 
-print(a==b==c)
+s = 'ab'
+from collections import Counter
+b = Counter(s)
+
+print(a==b)
