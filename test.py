@@ -1,7 +1,20 @@
-a = {'a':1,'b':1}
 
-s = 'ab'
-from collections import Counter
-b = Counter(s)
+def login(noOfDigitsForThePalindrome:int, userId:str, password:str):
+    if type(noOfDigitsForThePalindrome) != int or  noOfDigitsForThePalindrome <= 0 or not userId.isalnum() or not password.isalnum():
+        print("Invalid Input")
+        return
 
-print(a==b)
+    user_number = userId[4:]
+    password_number = password[4:]
+    if user_number != password_number:
+        print("UserId or password is not valid, pls try again.")
+        return
+
+    result = ["0" for _ in range(noOfDigitsForThePalindrome)]
+    result[0] = '1'
+    result[-1] = '1'
+    print(f"Welcome {userId} and the generated token is: token-{''.join(result)}.")
+
+
+    
+    
